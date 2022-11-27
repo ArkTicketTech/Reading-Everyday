@@ -27,6 +27,8 @@
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
 2. [@tommyjiang](https://github.com/tommyjiang)
 - [ ] 市场的逻辑（第三版） 2022.11.27 ~
+3. [@echo3582](https://github.com/echo3582)
+- [ ] 置身事内 2022.11.27 ~
 
 ## members
 @wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs
