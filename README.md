@@ -19,15 +19,14 @@
   - 坚持不到两周退群，请发退群红包；
   - N进宫；
   - 退役群友可以继续抢两个月红包，之后请退群。
+  
+如果本群感兴趣，也接受群规，请加群主微信并备注来意: constant_variation。谢谢！
 
 ## Reading List
-1. 枪炮、病菌与钢铁
-- [ ] [@wfnuser](https://github.com/wfnuser) 2022.11 ~ 
-2. tommyjiang
-  - [ ] 市场的逻辑（第三版） 2022.11.27 ~
-
-## More
-如果本群感兴趣，也接受群规，请加群主微信并备注来意: constant_variation。谢谢！
+1. [@wfnuser](https://github.com/wfnuser)
+- [ ] 枪炮、病菌与钢铁 2022.11 ~ 
+2. [@tommyjiang](https://github.com/tommyjiang)
+- [ ] 市场的逻辑（第三版） 2022.11.27 ~
 
 ## 广告区
 如果想更多的了解「微扰酱」，欢迎来关注我的个人公众号「微扰理论」和[知乎](https://www.zhihu.com/people/qin-hao-37)；或者直接微信扫码加微扰酱好友，交个朋友； 备注来意即可～
