@@ -28,6 +28,11 @@
 2. [@tommyjiang](https://github.com/tommyjiang)
 - [ ] 市场的逻辑（第三版） 2022.11.27 ~
 
+## members
+@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs
+
+## retired
+
 ## 广告区
 如果想更多的了解「微扰酱」，欢迎来关注我的个人公众号「微扰理论」和[知乎](https://www.zhihu.com/people/qin-hao-37)；或者直接微信扫码加微扰酱好友，交个朋友； 备注来意即可～
 ![](https://github.com/wfnuser/wfnuser/blob/main/banner.jpg)
