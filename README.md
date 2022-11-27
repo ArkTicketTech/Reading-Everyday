@@ -23,6 +23,8 @@
 ## Reading List
 1. 枪炮、病菌与钢铁
 - [ ] [@wfnuser](https://github.com/wfnuser) 2022.11 ~ 
+2. tommyjiang
+  - [ ] 市场的逻辑（第三版） 2022.11.27 ~
 
 ## More
 如果本群感兴趣，也接受群规，请加群主微信并备注来意: constant_variation。谢谢！
