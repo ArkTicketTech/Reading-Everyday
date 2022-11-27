@@ -29,9 +29,11 @@
 - [ ] 市场的逻辑（第三版） 2022.11.27 ~
 3. [@echo3582](https://github.com/echo3582)
 - [ ] 置身事内 2022.11.27 ~
+4. [@willhunger](https://github.com/willhunger)
+- [ ] [CMU 15-721](https://15721.courses.cs.cmu.edu/spring2020/schedule.html) 2022.11 ~
 
 ## members
-@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs
+@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger
 
 ## retired
 
