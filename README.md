@@ -35,6 +35,8 @@
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
 6. [@x-wqs](https://github.com/x-wqs)
 - [ ] 生命3.0 2022.11.28 ~ 
+7. [@AnjanaVakil](https://github.com/AnjanaVakil)
+- [ ] 《数据密集型应用系统设计》2022.11.28 ~
 
 ## members
 @wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger
