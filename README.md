@@ -37,6 +37,8 @@
 - [ ] 生命3.0 2022.11.28 ~ 
 7. [@AnjanaVakil](https://github.com/AnjanaVakil)
 - [ ] 《数据密集型应用系统设计》2022.11.28 ~
+8. [@VacuumCAT](https://github.com/VacuumCAT)
+- [ ] 《机器学习》2022.11.28 ~
 
 ## members
 @wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger
