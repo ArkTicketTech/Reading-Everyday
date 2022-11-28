@@ -33,6 +33,8 @@
 - [ ] [CMU 15-721](https://15721.courses.cs.cmu.edu/spring2020/schedule.html) 2022.11 ~
 5. [@BertramRay](https://github.com/BertramRay)
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
+6. [@x-wqs](https://github.com/x-wqs)
+- [ ] 生命3.0 2022.11.28 ~ 
 
 ## members
 @wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger
