@@ -68,7 +68,7 @@ LSM-Tree: faster for writes
 
 ### Index
 
-* clustered index: stroring `all row data` within the index
+* clustered index: storing `all row data` within the index
 * nonclustered index: storing `only references to the data` with the index
 
 ### View
