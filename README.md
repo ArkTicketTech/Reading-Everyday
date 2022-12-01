@@ -26,7 +26,7 @@
 1. [@wfnuser](https://github.com/wfnuser)
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
 2. [@tommyjiang](https://github.com/tommyjiang)
-- [ ] 永远是创业第一天 2022.11.29 ~
+- [ ] 随缘 2022.11.29 ~
 3. [@echo3582](https://github.com/echo3582)
 - [ ] 置身事内 2022.11.27 ~
 4. [@willhunger](https://github.com/willhunger)
