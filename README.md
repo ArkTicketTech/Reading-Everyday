@@ -20,6 +20,7 @@
   - N进宫；
   - 退役群友可以继续抢两个月红包，之后请退群。
   
+
 如果本群感兴趣，也接受群规，请加群主微信并备注来意: constant_variation。谢谢！
 
 ## Reading List
@@ -39,9 +40,11 @@
 - [ ] 《数据密集型应用系统设计》2022.11.28 ~
 8. [@VacuumCAT](https://github.com/VacuumCAT)
 - [ ] 《机器学习》2022.11.28 ~
+9. [@Danie10ne](https://github.com/Danie10ne)
+- [ ] 《数据密集型应用系统设计》2023.1.18 ~
 
 ## members
-@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger
+@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger@danie10ne
 
 ## retired
 
