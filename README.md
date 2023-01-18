@@ -44,7 +44,7 @@
 - [ ] 《数据密集型应用系统设计》2023.1.18 ~
 
 ## members
-@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger@danie10ne
+@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger @danie10ne
 
 ## retired
 
