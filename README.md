@@ -42,9 +42,11 @@
 - [ ] 《机器学习》2022.11.28 ~
 9. [@Danie10ne](https://github.com/Danie10ne)
 - [ ] 《数据密集型应用系统设计》2023.1.18 ~
+10. [@BedrockToTheTop](https://github.com/BedrockToTheTop)
+- [ ] 《C和指针》2023.1.19 ~ 
 
 ## members
-@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger @danie10ne
+@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger @danie10ne @bedrocktothetop
 
 ## retired
 
