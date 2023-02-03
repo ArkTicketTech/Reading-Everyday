@@ -1,0 +1,7 @@
+> Well, it’s crazy to think anybody’s going to be smart enough to husband money and then just come out on the bottom tick in some crazy crisis and spend it all. Always there’s some person that does that by accident, but that’s too tough a standard. Anybody who expects that of Berkshire Hathaway is out of his mind.
+>
+> 如果你觉得有人能做到一直捂着现金，等股市跌到谷底的时候全部梭哈抄底，这种想法实在太傻了，根本没有人能做到这件事。当然偶尔有些人确实能抄到底，但这只是个例，并不是普遍现象。任何人如果觉得伯克希尔能做到捂着大笔现金等到最低点梭哈抄底，那他脑子一定有问题。（注：这段是芒格说的）
+
+> **Charlie and I never were very good at dancing, but we really can’t do that dance**.
+>
+> **我和查理从不擅长择时，我们真的做不到在市场最低点抄底**。（注：这里的 dancing 本义为跳舞，跳舞需要踩准节奏，就像抄底逃顶需要踩准一样）
