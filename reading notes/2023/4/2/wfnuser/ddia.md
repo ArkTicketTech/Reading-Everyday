@@ -1,0 +1,10 @@
+- ## SSTables and LSM-Trees  
+	- 图3-3中 log-structure storage segment 是完全按照写入顺序存储的；我们可以通过设计一种存储格式让段内键有序排列提高效率；我们称为 Sorted String Table；SSTable for short  
+	- 先来看看优势：  
+		- Merging Segment is simple and efficient  
+			- 这是一道典型的合并有序链表的leetcode题  
+			- merge sort algorithm  
+			- ![image.png](../assets/image_1680097482445_0.png)  
+		- 查找的时候不再需要在内存中存储一个包含所有key的偏移索引了  
+			- ![image.png](../assets/image_1680097641799_0.png)  
+			- 我们可以建立一个稀疏索引来替代  
