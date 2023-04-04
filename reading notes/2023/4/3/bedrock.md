@@ -1,0 +1,7 @@
+MySQL行级别的并行复制，是在MySQL 5.7及其之后的版本中引入的，在MySQL 5.6中只支持库级别的并行复制，在MySQL 5.5及其更早的版本中只支持单线程复制。
+关于MySQL行级别的并行复制原理，我们也许经常会听到如下说法：
+- 简单点的： 从库中的协调器线程根据Gtid_log_event和Anonymous_gtid_log_event中记录的last_committed值做并行分发，相同的last_committed值的事务就可以并行应用。
+- 复杂点的： 主库在做并行事务提交时，处于prepare状态的事务都可以在从库并行应用，因为他们不存在锁冲突。
+- 主库侧： 在提交事务时，对每个事务定义其lock interval，并记录到binlog中。使用last_committed表示事务lock interval的起始点，它是在事务进入prepare阶段之后，进入binlog flush队列之前获取的当时commit队列（这里指的是事务提交的flush、sync、commit三个队列中的commit队列）中所有事务的最大sequence_number（为什么要从commit队列里获取，而不是从已提交完成的事务中获取呢？因为提交完成的事务锁已经释放，无法判断有没有锁冲突）；使用sequence_number表示事务lock interval的结束点，它是在事务进入binlog flush队列之后从当时正在使用的binlog file的事务计数器中获取值（每个binlog file都会将计数器重置）。
+- 从库侧： 协调器线程根据last_committed做分发，只要last_committed和sequence_number组成的lock interval锁范围重叠的事务，就可以并行应用（可以分发）。 具体实现上，在MySQL内部定义了一个last_lwm_timestamp变量，用来记录所有回放事务中已经提交完成事务的timestamp(sequence_number)的low-water-mark。 low-water-mark对应的事务已经提交，且该事务之前的事务（seqno小于low-water-mark的事务）都已经提交。 当协调器线程读取到一个事务的last_committed值时，判断该事务的last_committed值是否小于等于low-water-mark值，如果是，则协调器线程就可以将其分发给worker线程（具体是否分发还需要看是否有worker线程处于空闲状态，如果没有worker线程处于空闲，协调器线程需要等待空闲的worker线程），否则，协调器线程不能将该事务分发给worker线程，需要进行等待。
+- 从库侧并行分发策略的逻辑图解： 假设下图中的L代表lock interval的开始，C代表lock interval的结束。
