@@ -1,0 +1,19 @@
+- 基于 SSTables 实现 LSM-Tree  
+	- LevelDB RocksDB Cassandra 都采用了 LSM-Tree 作为存储引擎。 SSTable 和 memtable 的术语最早出现在 Google 的 Bigtable 论文中。 Log-Structured Merge-Tree 的数据结构最早由 Patrick O'Neil 等人设计。  
+	- ![LSM-Tree Compaction Visualization](https://disc-projects.bu.edu/compactionary/img/compactionary-lsm-everywhere.png)  
+	- Lucene 也用了类似的 LSM-Tree 存储结构来存储结构。  
+		- term -> posting list  
+	- ![Near-Data Processing-Enabled and Time-Aware Compaction Optimization for LSM- tree-based Key-Value Stores | Semantic Scholar](https://d3i71xaburhd42.cloudfront.net/7dccf1cbd88820538bc42c87bceb3c4385f1a871/2-Figure1-1.png)  
+	- 对于不存在的数据，仍然需要访问许多不同的segment以查询数据。  
+		- 可以利用 bloom filter 极大地过滤掉不必要的查询。  
+	- 压缩是LSM-Tree最复杂的部分，有很多种不同的策略，LSM-Tree的工业级实现在这方面做了比较大的优化。  
+		- ![image.png](../assets/image_1680249479447_0.png)  
+		- 主流的实现包括：size-tiered 和 leveled compaction。LevelDB就是后者的典型实现。  
+		- size-tiered compaction  
+			- ![compaction](https://www.scylladb.com/wp-content/uploads/compaction-1.png)  
+			- ![image.png](../assets/image_1680259038111_0.png)  
+		- leveled compaction  
+			- ![image.png](../assets/image_1680268655021_0.png)  
+		- size-tiered compaction strategy 对写入更友好； leveled compaction strategy 对读取更友好。前者合并的时候只要每一层文件数超过阈值就直接合并成一个文件放到下一层，因此每一层的分片文件仅内部有序，彼此之间有交叠。后者合并的时候则是相邻两层进行合并，因此除了L0层之外，每一层的文件之间也是有序排列的。查询的时候可以通过二分完成。  
+		- 前者会浪费更大的空间和更快的写入操作，后者则有更大的写放大和更好的查询效率。  
+	-  
