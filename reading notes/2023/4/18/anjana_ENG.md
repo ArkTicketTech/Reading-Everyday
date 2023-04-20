@@ -1,6 +1,6 @@
 《中式英语之鉴》练习部分
 
-**II. Redundant Twins**
+**III. Redundant Twins**
 
 **Twenty exercises**
 
