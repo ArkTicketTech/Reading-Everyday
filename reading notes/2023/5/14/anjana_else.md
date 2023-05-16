@@ -20,6 +20,6 @@ But perhaps an even bigger geopolitical risk for NVIDIA is its dependence on tsm
 
 Reference: 
 
-www.youtube.com. (n.d.). How Nvidia Grew From Gaming To A.I. Giant, Now Powering ChatGPT. [online] Available at: https://www.youtube.com/watch?v=d3L2uPuxOxU [Accessed 27 Mar. 2023].
+www.youtube.com. (n.d.). How Nvidia Grew From Gaming To A.I. Giant, Now Powering ChatGPT. [online] Available at: https://www.youtube.com/watch?v=d3L2uPuxOxU [Accessed 27 Mar. 20x23].
 
 > 目前主流的GPU以英伟达A100为主，它用来应对底层算力需求的增长迅速。
