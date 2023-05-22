@@ -1,1 +1,20 @@
-test
+# \## 01-04 媒体类型
+
+因特网上有数千种不同的数据类型，http仔细地给每种要通过web传输的对象都打上了名为MIME类型（MIME type）的数据格式标签。
+
+最初设计MIME(Multipurpose Internet Mail Extentsion， 多用途因特网邮件扩展)是为了解决在不同的电子邮件系统之间搬移报文时存在的问题。 MIME 在电子邮件系统中工作得非常好， 因此HTTP也采纳了它， 用它来描述并标记多媒体内容。
+
+web服务器会为所有HTTP对象数据附加一个MIME类型。 当web游览器从服务器中取回一个对象时， 会去查看相关的MIME类型，看看它是否知道应该如何处理这个对象。
+
+大多数游览器都可以处理数百种常见的对象类型： 显示图片文件、解析并格式化HTML文件、通过计算机声卡播放音频文件，或者运行外部插件软件来处理特殊格式的数据。
+
+- text/html 类型来标记
+    
+- text/plain 类型来标记
+    
+- JPEG版本的图片为 image/jpeg类型
+    
+- GIF格式的图片为image/gif类型
+    
+
+**出处**：[Gourley David,Totty Brian《HTTP权威指南》(2012) P](zotero://select/library/items/WK5NQJZ4)6-7
