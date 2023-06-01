@@ -23,29 +23,18 @@
 如果本群感兴趣，也接受群规，请加群主微信并备注来意: constant_variation。谢谢！
 
 ## Reading List
-1. [@wfnuser](https://github.com/wfnuser)
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
-2. [@tommyjiang](https://github.com/tommyjiang)
 - [ ] 随缘 2022.11.29 ~
-3. [@echo3582](https://github.com/echo3582)
 - [ ] 置身事内 2022.11.27 ~
-4. [@willhunger](https://github.com/willhunger)
 - [ ] [CMU 15-721](https://15721.courses.cs.cmu.edu/spring2020/schedule.html) 2022.11 ~
-5. [@BertramRay](https://github.com/BertramRay)
 - [ ] 枪炮、病菌与钢铁 2022.11 ~ 
-6. [@x-wqs](https://github.com/x-wqs)
 - [ ] 生命3.0 2022.11.28 ~ 
-7. [@AnjanaVakil](https://github.com/AnjanaVakil)
 - [ ] 《数据密集型应用系统设计》2022.11.28 ~
-8. [@VacuumCAT](https://github.com/VacuumCAT)
 - [ ] 《机器学习》2022.11.28 ~
-9. [@Danie10ne](https://github.com/Danie10ne)
 - [ ] 《数据密集型应用系统设计》2023.1.18 ~
-10. [@BedrockToTheTop](https://github.com/BedrockToTheTop)
 - [ ] 《C和指针》2023.1.19 ~ 
 
 ## members
-@wfnuser @tommyjiang @echo3582 @vacuumcat @x-wqs @willhunger @danie10ne @bedrocktothetop
 
 ## retired
 
