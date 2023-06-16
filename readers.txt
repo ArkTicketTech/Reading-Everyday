@@ -7,7 +7,6 @@ vacuumcat
 x-wqs
 anjana
 nekoken
-willhunger
 plumbanana
 babyshark
 qiqizheng
