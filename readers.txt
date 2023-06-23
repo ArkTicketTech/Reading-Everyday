@@ -2,7 +2,6 @@ wfnuser
 changfengzhi
 bedrock
 bertramray
-tommyjiang
 vacuumcat
 x-wqs
 anjana
