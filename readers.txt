@@ -9,5 +9,4 @@ babyshark
 qiqizheng
 paradisuman
 Inasayang
-echo
 nekoken
