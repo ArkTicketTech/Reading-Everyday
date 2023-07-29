@@ -1,0 +1,7 @@
+- Histogram and frequency Polygon  
+	- histogram - shape, center, and spread of the distribution of numerical data  
+	- frequency polygon  
+		- cumulative frequency distribution  
+	- ![image.png](../assets/image_1689690477500_0.png){:height 484, :width 340}  
+	-  
+	-  
