@@ -96,9 +96,9 @@ fmt.Println(x)
 
 -   如果最后一个fmt.Println行被删除，在其前面的两行会打印相同的值32；否则，一个打印32，一个打印8
 -   如果我们假设结果切片的长度和容量总是相等，就可能写出一些有bug的代码
-    （https://github.com/go101/go101/wiki/The-capacity-of-the-result-byte-%28or-rune%29-slice-of-a-conversion-from-a-string-is-undefined）（Mark）
-
-
+    （https://github.com/go101/go101/wiki/The-capacity-of-the-result-byte-%28or-rune%29-slice-of-a-conversion-from-a-string-is-undefined）
+    -   没有测试出来，可能改了
+    
 
 对于切片s，循环`for i = range s {...}`并不等价于循环`for i = 0; i < len(s); i++{...}`(Mark)
 
@@ -122,7 +122,7 @@ func main() {
 }
 ```
 
-
+-   因为`for i = 0; i < len(s); i++{...}`会比`for i = range s {...}`多一次操作`i++`和判断
 
 
 
