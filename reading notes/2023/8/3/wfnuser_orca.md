@@ -1,0 +1,3 @@
+- parser -> rewrite -> ORCA -> executor  
+- ORCA 消费 Query Tree 生成 plannerstmt  
+	- QueryDXL -> Algebrized Query -> Algebrized Preprocessed Query -> Exploration -> Implementation -> Optimization -> PlanDXL -> Planned Statement  
