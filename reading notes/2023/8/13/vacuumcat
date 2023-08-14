@@ -1,0 +1,7 @@
+继续来看安卓源码分析中的activity启动过程。
+p400页开始讲解了activity启动过程中所需的组件。
+其中instrumentation用来监控应用程序与系统间的交互。
+activitythread顾名思义是描述应用程序进程的类。
+最重要的是binder与ibinder，mtoken是一个binder代理对象。
+代理对象同样是一种设计模式。
+activitymanager用来实现activity的启动。
