@@ -14,11 +14,13 @@ void philosopher(int i) {
         put((i+1)%N);
     }
 }
+```
+
+```cpp
 为了防止死锁的发生，可以设置两个条件：
 
 必须同时拿起左右两根筷子；
 只有在两个邻居都没有进餐的情况下才允许进餐。
-C
 
 #define N 5
 #define LEFT (i + N - 1) % N // 左邻居
