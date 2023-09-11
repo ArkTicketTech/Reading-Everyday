@@ -1,0 +1,17 @@
+继续来看《Android系统源代码情景分析》
+第五章 Binder进程间通信系统
+之前提到了，在前几天用Binder的时候，我发现Binder虽然存在，但其内部的内容没有了。
+通过打log可以发现，Binder在源进程被杀的情况下，变为了BinderProxy类型。
+也许现在用的Binder和书中的实现会有些许区别，但我想相差不是很大。
+其本质都是代理模式。
+来看用到的基础数据结构：
+binder_work描述待处理的工作项
+binder_node描述Binder实体对象
+binder_ref_death描述Service组件的死亡接收通知
+binder_ref描述Binder引用对象
+binder_buffer描述内核缓冲区
+这说明了binder本质是用内核缓冲区传递内容。但我也有个问题，那这样的话，还需要复制一份源内容吗。
+binder_proc描述正在使用Binder进程间通信机制的进程
+binder_thread描述Binder线程池中的一个线程
+binder_transaction描述进程间通信过程（也就是事务）
+之后还有一些枚举量，下次再看。
