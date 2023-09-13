@@ -1,0 +1,6 @@
+继续binder。
+返回协议代码binderDriverReturnProtocol是一个枚举类
+定义了一些通信时需要的类型。binder_ptr_cookie用来描述一个实体对象或者一个service组件的死亡接收通知。
+binder_transaction_data指的是进程间通信过程的数据。
+flat_binder_object不仅可以描述binder实体对象或者引用对象
+还可以描述文件描述符
