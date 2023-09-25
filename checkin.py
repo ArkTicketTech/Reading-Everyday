@@ -7,7 +7,7 @@ reader_path = os.path.join(script_dir, 'readers.txt')
 
 # 读取参与打卡的人员名单
 with open(reader_path) as f:
-    users = [line.strip() for line in f.readlines()]
+    users = [line.strip() for line in f.readlines() if not line.strip().startswith("#")]
 
 # 获取当前日期和前两天日期
 today = datetime.date.today()
