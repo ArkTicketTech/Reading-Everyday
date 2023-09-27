@@ -1,0 +1,6 @@
+- #interview #[[computer science]] #card C语言函数调用过程 main 调用 foo  
+	- ESP表示栈顶 EBP是基础指针 EIP指向下一条指令  
+	- 函数调用前调用者 - EAX ECX EDX 进栈，main 将参数一一进栈，EIP 进栈  
+	- 函数调用后被调用者 - 将 EBP 进栈，保留 main 函数的基地址； EBP = ESP 赋值建立新的栈帧； foo 为局部变量分配空间；  
+	- 函数返回前被调用者 - 返回值保存至EAX；恢复 EBX ESI EDI 寄存器值；然后恢复 ESP 到 EBP； 再 pop ebp 恢复 EBP 到 main 的基地址  
+	- 函数返回后调用者 - 抛弃 foo 的参数，并按需弹出栈中保存的 EAX ECX EDX 的值，恢复ESP到调用前位置  
