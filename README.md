@@ -35,6 +35,7 @@
 - [ ] 《C和指针》2023.1.19 ~ 
 - [ ] Golang101 2023.5.24~2023.8.9
 - [ ] System Design Interview An Insider’s Guide 2023.8.10~
+- [ ] Java并发编程实战 2023.10.01 ~
 
 ## members
 
