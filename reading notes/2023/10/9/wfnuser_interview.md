@@ -1,0 +1,8 @@
+- motion 改进  
+	- gp 原本的 redistribute 是按照 QE 数量模的  
+	- a join b 对于 gp 来说， 如果 b 按照 hash 分布， a 随机分布，照理只需要重分布 a 即可； 但是有了 parallel 之后， 按 A 分布 mod seg*worker 和 B 分布还是不一致，两者都需要分布  
+	- pg 提供了 parallel hash join 共享内表的方式，因此修改 a 的分布方式 为 mod seg 之后随机 （parallel redistribute），可减少 motion 代价  
+	-  
+	- 但是对于 a = 2 phase agg join b 的情况，a之前的分布是按 mod seg*worker 来的 （随机不行，因为没法 agg）； 所以还是得加一次 motion  
+		- 因此删去了 parallel redistribute 将两种分布方式都改成 先 按 seg 分布，再按 worker 分布的方式； 这样两阶段聚集还是可以直接和按join key分布的内表直接 parallel join  
+		- 如果 seg 和 worker 数量相同， mod 怎么取？ - which seg = x % seg  | which worker = x % (seg * worker) / seg  
