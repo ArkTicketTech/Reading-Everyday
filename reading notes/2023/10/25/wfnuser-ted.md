@@ -1,0 +1,15 @@
+- [做出更好决策的三种方式 - 采用跟计算机一样的思考方式](https://www.ted.com/talks/tom_griffiths_3_ways_to_make_better_decisions_by_thinking_like_a_computer?language=zh-tw)  
+- 演讲者 - Tom Griffiths - 认知科学家  
+-  
+- 作者从悉尼租房的决策开始引入 - 即看多少房子应该决定要当前这套还是离开看下一套  
+	- 答案是 37% - 大致意思是要花37%的时间用来探索，之后遇到比探索到的最好的好的就停下来 具体待考证  
+- 这样的问题的解决方案其实和计算机科学的思路是很接近的 - 是典型的 exploit-explore tradeoff  
+	- 比如去决定吃什么，就是这样的问题  
+		- 要考虑的因素还包括你未来在当前城市的时间，比如如果你只是来了一次，那么你应该选择 exploit ，直接去你知道的好吃的地方；如果你要在这个地方待很久，则可以考虑 explore ，探索得到信息的价值会比吃一顿饭的价值高  
+- 作者还举了另一个计算机科学的例子 - 在衣柜中抛弃多余的衣服要怎么选  
+	- 计算机科学中的缓存淘汰策略就是研究这个的 - LRU 是作者认为的最佳实践  
+	- 而你桌上那个所有人认为杂乱的纸堆其实就是这样一个完美的系统 - 你最近使用过的文件永远在纸堆的最上面  
+-  
+- 做最优决策是需要冒险的 - 37%法则能获得最优解的概率也是37% - 但这是你能做到的最好结果  
+-  
+  > These aren't the concessions that we make when we can't be rational, they are what being rational means.  
