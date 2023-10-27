@@ -33,3 +33,48 @@ Java内存模型规定了所有的变量都存储在主内存，每条线程还�
 6. assign：执行引擎的赋值操作
 7. store：工作内存的变量值传递给主内存，以便随后的write使用
 8. write：将变量放入到主内存中
+
+
+## 对于volatile型变量的特殊规则
+
+volatile保证了变量的可见性，可见性是指此变量的值一旦被当前修改，当前线程能立刻通知其他线程下次读取不再走缓存而是走主存。注意这里只是下次的读取从主存中获取，但已经读取到工作内存中的值并不会被修改。所以volatile只保证了可见性的语义，并没有保证原子性的语义，比如race++，它不是一个原子操作，而是一个复合操作：
+
+1. 从主存中读取race的值；
+2. 对值进行+1；
+3. 写回race的值到主存中
+
+如果有两个线程同时执行race++，这就是一个read-modify-write的竞态条件，所以必然是线程不安全的。
+
+因此volatile的使用场景一般是：
+
+1. 运算结果不依赖变量的当前值，或者能确保只有单一的线程能修改变量的值；
+2. 变量不需要与其他的状态变量构成不变性条件。
+
+内存屏障：https://bbs.huaweicloud.com/blogs/344101
+
+
+
+volatile的另一个保证是禁止指令重排序优化。
+
+```java
+Map configurations;
+char[] configText;
+volatile boolean initialized = false;
+// 线程A执行
+configurations = new HashMap<>();
+configText = readConfigFile(fileName);
+processConfigOptions(configurations,configText);
+initialized = true;
+
+// 线程B执行
+while(!initialized) {
+    sleep();
+}
+doSomethingWithConfig();
+```
+
+如果volatile没有禁止重排序，那么`initialized = true`很有可能因为重排序在线程A中被提前执行，从而导致线程B续的doSomethingWithConfig出错。
+
+这个例子说明的是，如果volatile仅仅只是保证可见性，那多线程执行下，重排序还是会导致出错，所以禁止重排序保证了底层代码的执行语义与程序代码提供的语义是一致的，也被称为「线程内表现为串行的语义」（within-thread as if serial Semantics）.
+
+volatile的性能优于内置锁，也比普通变量的读写差的不多。
