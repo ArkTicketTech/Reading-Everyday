@@ -37,6 +37,7 @@
 - [ ] System Design Interview An Insider’s Guide 2023.8.10~
 - [ ] Java并发编程实战 2023.10.01 ~ 2023.10.26
 - [ ] 深入理解Java虚拟机 2023.10.27 ~ 
+- [ ] English Conversation Premium 2023.10.31 ~
 
 ## members
 
