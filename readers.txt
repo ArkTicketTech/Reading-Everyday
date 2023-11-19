@@ -3,7 +3,6 @@ wfnuser
 vacuumcat
 x-wqs
 anjana
-babyshark
 qiqizheng
 #Inasayang
 nekoken
