@@ -36,9 +36,10 @@
 - [ ] Golang101 2023.5.24~2023.8.9
 - [ ] System Design Interview An Insider’s Guide 2023.8.10~
 - [ ] Java并发编程实战 2023.10.01 ~ 2023.10.26
-- [ ] 深入理解Java虚拟机 2023.10.27 ~ 
+- [ ] 深入理解Java虚拟机 2023.10.27 ~ 2023.11.21
 - [ ] English Conversation Premium 2023.10.31 ~
 - [ ] English Vocabulary In Use Elementary 2023.11.12 ~ 
+- [ ] Kafka权威指南 2023.11.22 ～ 
 
 ## members
 
