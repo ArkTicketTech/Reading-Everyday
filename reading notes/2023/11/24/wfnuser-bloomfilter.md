@@ -1,0 +1,8 @@
+- 并行 bloomfilter
+	- hashjoin 内表扫描的时候顺便建立 bloom filter ； 扫描外表如果 match 失败直接返回； 好处在于利用了 l3 cache
+	- 并行的时候需要用 barrier 控制， bitmap 合并后进行外表扫描
+- GPORCA 支持 postgres 自定义索引
+	- 需要解决的问题 1) 自定义索引需要 2) orca 里没有自定义扫描的机制，索引都是写死的
+	- 方案1 在表中序列化插件中自定义的 cost 函数，这样对pg的代码有入侵
+	- 方案2 static 方法初始化所有原生索引类型的cost函数，存在一个内存中的hash表中（而不是写死）；并提供同样的注册函数给 pg ，pg 插件实现者在 __PG_INIT 调用这个函数； orca 在需要的时候可根据 oid 从内存的 hash 表中获得 cost 计算函数
+	- 两个方案都需要将原来 orca 中通过 switch case 来计算不同算子 cost 的逻辑改成调用插件提供的cost函数 具体参考 https://github.com/orgs/cloudberrydb/discussions/113
