@@ -1,0 +1,61 @@
+
+本章讨论的话题
+
+- kafka控制器
+- kafka的复制是如何工作的
+- kafka如何处理来自生产者和消费者的请求
+- kfaka的存储细节，比如文件格式和索引
+
+# 集群的成员关系
+
+Kafka使用ZooKeeper来维护集群成员的信息，每个broker都有一个唯一标识符。
+
+broker启动的时候，它通过创建临时节点把自己的id注册到Zookeeper组件。Kafka组件订阅zookeeper的/brokers/ids路径，当有broker加入集群或者退出集群时，这些组件就可以获得通知。
+
+当broker停机、出现网络分区或者长时间垃圾回收停顿时，broker会从zookeeper上断开连接，此时broker在启动时创建的临时节点会自动从zookeeper移除。监听broker列表的kafka组件会被告知该broker已经移除。
+
+在关闭broker时，它对应的节点也会消失，不过它的id会继续存在于其他数据结构中，如果使用相同的ID启动另一个全新的broker，它会立即加入集群，并拥有与旧broker相同的分区和主题。
+
+# 控制器
+
+controller其实就是集群中其中一个broker，只不过它除了具有一般broker的功能外，还负责分区leader的选取。
+
+集群里第一个启动的broker会成为controller，如果controller被认为下线，集群里的其他broker通过watch对象得到controller node消失的通知，它们会尝试自己成为新的controller，第一个在zookeeper里成功创建controller的broker会成为新的controller。
+
+如果某个broker离开集群，可能有某个分区leader也跟着下线，此时controller会遍历分区，并确定一个新的分区leader。leader负责处理生产者和消费者的请求。
+
+简而言之，kafka使用zookeeper的临时节点来选举controller，并在节点加入集群或者退出集群时通知controller。controller负责在节点加入或者离开集群时进行分区首领选举，controller使用epoch（实际上就是版本号，旧leader的版本号落后于新leader的版本号，旧leader就会被拒绝）来避免脑裂，脑裂是指两个节点同时认为自己是当前的控制器。
+
+## KRaft: Kafka’s New Raft-Based Controller
+
+从19年开始，kafka社区就开始了一个项目，将基于zookeeper的controller转换为基于raft的controller，
+
+kafka3.0 release将会正式包含KRaft。
+
+为什么需要KRaft替换Zookeeper？
+
+1. 元数据被同步写入Zookeeper，但异步发送到broker。此外，从Zookeeper接受更新是异步的。导致元数据在一些边缘场景下，broker、controller、zookeeper之间的数据是不一致的；
+2. 每当controller重启的时候，它必须从zookeepr读取所有broker和分区的metadata，然后发送给所有的brokers。随着分区和代理数量的增加，重新启动controller的速度越来越慢。
+3. 围绕元数据所有权的设计不是很好，分散在controller、broker、zookeeper之间
+4. zookeeper是一个独立的分布式系统，掌握成本高
+
+
+
+Zookeeper的两个最重要的作用：
+
+1. 选举leader
+2. 存储元数据
+
+controller也管理元数据。
+
+在Kraft版本中，controller是管理元数据日志的raft quorum，该日志包括了对集群元数据的每一次修改，以前存在zookeeper的数据都存在该日志中了。
+
+元数据日志的leader被称为active controller，active controller处理所有的rpc请求，跟随者副本则进行数据的复制。
+
+controller不会推送更新，而是broker通过MetadataFetch API主动拉取更新。brokers会追踪最新元数据变更的偏移量，broker将会持久化元数据到磁盘，这意味着可以快速启动，即使有上百个分区。
+
+
+
+broker将会注册到controller quorum，一旦broker关闭，它将下线但是仍然保持注册。上线的broker，但是没有同步到最新的元数据，会被隔离不允许处理请求。
+
+以前通过zookeeper路由的，现在都将由controller路由。
