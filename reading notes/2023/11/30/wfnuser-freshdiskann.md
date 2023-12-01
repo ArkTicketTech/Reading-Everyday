@@ -1,0 +1,14 @@
+- The FreshDiskANN system
+	- The main idea of overall system FreshDiskANN is to store a bulk of the graph-index on an SSD, and store only the recent changes in RAM
+	- 每次插入节点可能导致对其所有邻居的 robust prune ； 这会带来 R 次随机写，降低写的性能
+	- FreshVamana 会将索引分成内存中的近期修改和 SSD 上的 long term data
+		- LTI (long-term index) + TempIndex (Temporary Index) + DeleteList
+		- LTI 占用的内存比较少，每个点只存了压缩的 25-32 bytes 的向量表示； 图和高精度的数据存储在 SSD 上
+		- TempIndex 在内存中存图和高精度数据，但是只存最近插入的点，因此占用的内存也少
+		- DeleteList就是近期删除的点；用于 filter 返回结果
+	- RO-TempIndex RW-TempIndex
+	- Streaming Merge Procedure
+		- Delete Phase
+		- Insert Phase
+			- 反向边不会立刻被写入磁盘，因为这会带来随机写；而是记录在内存中，等 patch 阶段从 SSD 一块块读出 block 并根据内存中维护的数据结构写入反向边，并进行 prune
+		- Patch Phase
