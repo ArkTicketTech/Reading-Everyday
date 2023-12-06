@@ -39,8 +39,9 @@
 - [ ] 深入理解Java虚拟机 2023.10.27 ~ 2023.11.21
 - [ ] English Conversation Premium 2023.10.31 ~
 - [ ] English Vocabulary In Use Elementary 2023.11.12 ~ 
-- [ ] Kafka权威指南 2023.11.22 ～ 
+- [ ] Kafka权威指南 2023.11.22 ～ 2023.12.05
 - [ ] 数据库系统内幕 2023.12.04 ~
+- [ ] MySQL技术内幕 InnoDB存储引擎 2023.12.06 ~ 
 
 ## members
 
