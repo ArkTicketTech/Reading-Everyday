@@ -145,7 +145,7 @@ checkpoint技术的目的主要就是在恢复redo log时可以从某个确定�
 
 当数据库发生宕机时，数据库不需要重做所有的日志，因为checkpoint之前的页都已经刷新回磁盘。
 
-数据库只需对checkpoint后的redo log进行恢复。
+数据库只需对**checkpoint后的redo log**进行恢复。这样就大大缩短了数据恢复的时间。
 
 
 
@@ -156,10 +156,17 @@ checkpoint技术的目的主要就是在恢复redo log时可以从某个确定�
 
 
 
-checkpoint有两种：
+对于InnoDB存储引擎而言，其是通过LSN（Log Sequence Number）来标记版本的。而LSN是8字节的数字，其单位是字节，每个页有LSN，redo log中也有LSN，checkpoint也有LSN，可以通过`show engine innodb status`来观察。
+
+在InnoDB存储引擎中，checkpoint发生的时间、条件及脏页的选择等都非常复杂。
+
+而Checkpoint所做的事情无外乎是将缓冲池的脏页刷新回磁盘，不同之处在于每次刷新多少页到磁盘，每次从哪里取脏页，以及什么时候触发checkpoint。
+
+
+InnoDB存储引擎内部，checkpoint有两种：
 
 1. sharp checkpoint：数据库关闭时将所有的脏页都刷新回磁盘
-2. fuzzy checkpoint：
+2. fuzzy checkpoint：只刷新部分的脏页到磁盘
 
 1. Master Thread Checkpoint：以一定频率将一定比例的脏页刷新回磁盘
 2. Flush_LRU_List checkpoint：InnoDB需要保证一定的空闲页（Free List）始终可供使用，空闲页数量由参数innodb_lru_scan_depth，默认1024.
@@ -173,3 +180,7 @@ checkpoint有两种：
 2. 保证了redo log的循环使用的可用性
 
 1. Dirty Page too much Checkpoint：脏页数量太多，导致InnoDB存储引擎强制进行checkpoint，由参数innodb_max_dirty_pages_pct控制
+
+
+
+一言以蔽之，checkpoint是为了知道恢复时从哪加载redo log。
