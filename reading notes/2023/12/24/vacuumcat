@@ -1,0 +1,10 @@
+今天来看content provider的实现原理。
+前面写APP的部分直接略过。
+
+可以看到，其调用过程依旧是resolver开始。
+getcontentresolver是在contextwrapper中定义的。
+现在对于context，contextwrapper，contextimpl有了新的认识。
+不得不说，当阅读比较顺利时，看这一串的调用链非常舒服。
+一直到activitythread中的hashmap，最终拿到了cp。
+拿到cp后该如何去调用具体的cp呢？
+cp是怎样存储在系统中的，这部分明天看看。
