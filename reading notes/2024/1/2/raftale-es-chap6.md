@@ -477,8 +477,159 @@ Elasticsearch提供了这个特性，也就是Index life cycle management（ILM�
 
 ## Index life cycle
 
+![img](https://cdn.nlark.com/yuque/0/2024/png/32473878/1704266621199-fc923633-2109-4188-809a-f25251510ff1.png)
 
 1. HOT：读写
 2. WARM：只读
 3. COLD：只读
 4. FROZN：只读
+5. DELETE：永久删除
+
+hot->frozen的性能可能是越来越差的，如果硬件上有做区分的话。
+
+## Managing life cycle manually
+
+### Step1 Defining a life-cycle policy
+
+定义索引策略：`_ilm/policy/<index_policy_name>`
+
+```json
+# Creating a policy with hot and delete policies
+PUT _ilm/policy/hot_delete_policy 
+{
+  "policy": { 
+    "phases": {
+      "hot": { 
+        "min_age": "5s", 
+        "actions": {    
+          "set_priority": {  
+            "priority": 250
+          }
+        }
+      }, 
+      "delete": {  
+        "min_age":"10s",
+        "actions": {
+          "delete" : { }
+        }
+      }
+    }
+  }
+}
+```
+
+`hot_delete_policy`定义了hot和delete阶段的策略，数据一开始处于等待状态，经过5s后进入hot阶段。进入delete阶段后，由于min_age为10s，数据会等待10s，然后删除。
+
+`min_age`可以理解为至少等待`min_age`后，再执行后续的actions。
+
+min_age的理解不一定准确，后续再研究下
+
+### Step2 Associating the policy with an index
+
+```json
+# Creating an index with an index life cycle
+PUT hot_delete_policy_index
+{
+  "settings": { 
+    "index.lifecycle.name":"hot_delete_policy" 
+  }
+}
+```
+
+## Life cycle with rollover
+
+
+
+```json
+# ILM默认10分钟检查一次，为了验证，设置为1s
+PUT _cluster/settings
+{
+	"persistent": {
+		"indices.lifecycle.poll_interval": "1s"
+  }
+}
+
+#Simple policy definition for hot phase
+PUT _ilm/policy/hot_simple_policy
+{
+  "policy": {
+    "phases": {
+      "hot": {    
+        "min_age": "0ms", 
+        "actions": {
+          "rollover": {   
+            "max_age": "1d",
+            "max_docs": 10000,
+            "max_size": "10gb"
+          }
+        }
+      },
+      "delete": {  
+        "min_age":"10s",
+        "actions": {
+          "delete" : { }
+        }
+      }
+    }
+  }
+}
+# min_age 设置为0ms意味着数据一旦创建就开始rollover
+
+# Attaching a life-cycle policy to a template
+PUT _index_template/mysql_logs_template
+{
+  "index_patterns": ["mysql-*"], 
+  "template":{
+    "settings":{
+      "index.lifecycle.name":"hot_simple_policy", 
+      "index.lifecycle.rollover_alias":"mysql-logs-alias" 
+    }
+  }
+}
+
+# Setting the index as writable for the alias
+PUT mysql-index-000001   
+{
+  "aliases": {
+    "mysql-logs-alias": {   
+      "is_write_index":true 
+    }
+  }
+}
+
+# Creating an advanced life-cycle policy
+PUT _ilm/policy/hot_warm_delete_policy
+{
+  "policy": {
+    "phases": {
+      "hot": { 
+        "min_age": "1d", 
+        "actions": {
+          "rollover": {  
+            "max_size": "40gb",
+            "max_age": "6d"
+          },
+          "set_priority": { 
+            "priority": 50
+          }
+        }
+      },
+      "warm": { 
+        "min_age": "7d", 
+        "actions": {
+          "shrink": {    
+            "number_of_shards": 1
+          }
+        }
+      },
+      "delete": {      
+        "min_age": "30d", 
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
+```
+
