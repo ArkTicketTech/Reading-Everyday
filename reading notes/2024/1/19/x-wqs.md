@@ -1,0 +1,3 @@
+The most important skill for getting rich is becoming a perpetual learner. You have to know how to learn anything you want to learn. The old model of making money is going to school for 4 years, getting your degree, and working as a professional for thirty years. But things change fast now. Now, you have to come up to speed on a new profession  within nine months, and it's obsolete four years later. But within those three productive years, you can get very wealthy.
+
+It's much more important today to be able to become an expert in a brand-new field in nine to twelve months than to have studied the right thing a long time ago. You really care about having studied the foundations, so you're not scared of any book.
