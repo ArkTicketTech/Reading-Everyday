@@ -43,6 +43,7 @@
 - [ ] 数据库系统内幕 2023.12.04 ~
 - [ ] MySQL技术内幕 InnoDB存储引擎 2023.12.06 ~ 2023.12.22
 - [ ] Elasticsearch In Action, Second Edition 2023.12.23 ~ 2024.01.14
+- [ ] Redis设计与实现 2024.01.19 ~ 
 
 ## members
 
