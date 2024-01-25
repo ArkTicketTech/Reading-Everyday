@@ -91,3 +91,52 @@ type输出：
 # 字符串对象
 
 字符串对象的编码可以是int, raw, embstr。
+
+1. int: 可以用long类型保存的整数
+2. embstr或者raw：可以用long double类型保存的浮点数
+3. embstr或者raw：字符串值，或者因为长度太大而没办法用long类型表示的整数，又或者因为长度太大而没办法用long double类型表示的浮点数
+
+# 列表对象
+
+命令：
+
+```bash
+> rpush numbers 1 "three" 5
+(integer) 3
+```
+
+numbers为列表的key，后续的就是列表对象
+
+列表对象的编码可以是：
+
+1. ziplist：压缩列表存储的是值
+
+
+1. linkedlist：存储的是StringObject，StringObject再存储的是值
+
+
+ziplist的条件是：
+
+1. 列表对象保存的所有字符串元素的长度都小于64 字节;
+2. 且列表对象保存的元素数量小于512个;
+
+列表命令：
+
+1. LPUSH
+2. RPUSH
+3. LPOP
+4. RPOP
+5. LINDEX
+6. LLEN
+7. LREM
+8. LTRIM
+9. LSET
+
+
+# 哈希对象
+哈希对象的编码可以是ziplist或者hashtable。
+1. ziplist：ziplist编码的哈希对象使用压缩列表作为底层实现
+   a.
+2. hashtable：使用字典作为底层实现
+   a. 
+
