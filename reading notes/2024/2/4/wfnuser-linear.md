@@ -54,7 +54,7 @@ $$
 		  \end{pmatrix}
 		  $$		- $U x = c$
 		- 回代
-			- $z = -2 \\ y = 1 \\z = 2$
+			$z = -2 \\ y = 1 \\z = 2$
 	- E elementary 初等矩阵 elimination 消元矩阵
 		-
 $$
@@ -81,11 +81,16 @@ $$
 		  0 & 2 & -2 \\
 		  0 & 0 & 5 \\
 		  \end{pmatrix}
-		  $$ $$
+		  $$ 
+		  
+		  $$
 		  E_{32} (E_{21} A) = U
-		  $$ $$
+		  $$ 
+
+		  $$
 		  (E_{32} E_{21}) A = U
-		  $$		- 结合律成立 - associative law
+		  $$		
+		  - 结合律成立 - associative law
 	- permutation matrix
 		- exchange rows 1 and 2
 			-
@@ -99,7 +104,8 @@ $$
 			  a & b  \\
 			  c & d \\
 			  \end{pmatrix}
-			  $$		- exchange cols 1 and 2
+			  $$		
+			  - exchange cols 1 and 2
 			-
 $$
 			  \begin{pmatrix}
@@ -111,7 +117,8 @@ $$
 			  0 & 1  \\
 			  1 & 0 \\
 			  \end{pmatrix}
-			  $$	- inverse matrix
+			  $$	
+			  - inverse matrix
 		-
 $$
 		  \begin{pmatrix}
@@ -131,17 +138,6 @@ $$
 		  0 & 1 & 0 \\
 		  0 & 0 & 1 \\
 		  \end{pmatrix}
-		  $$		-
-$$E^{-1} E = I$$	-
-		-
-		-
-		-
-		-
-		-
-	-
-	-
-	-
-	-
-	-
-	-
-	-
+		  $$		
+		  -
+$$E^{-1} E = I$$	
