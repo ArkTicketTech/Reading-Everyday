@@ -45,6 +45,7 @@
 - [ ] Elasticsearch In Action, Second Edition 2023.12.23 ~ 2024.01.14
 - [ ] Redis设计与实现 2024.01.19 ~ 
 - [ ] 人的行为 2024.02.27 ~
+- [ ] 深入理解分布式系统 2024.02.29 ~ 
 
 ## members
 
