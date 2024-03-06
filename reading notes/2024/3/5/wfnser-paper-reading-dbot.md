@@ -1,0 +1,16 @@
+- Summary Tree Construction 摘要是用来做什么的？
+- reflection 具体是什么？
+- “experience from the chunk. If uncertain, explore diagnosis experience in chunks from child nodes or chunks with similar summaries” 大模型可以做到探索 child nodes ？
+- DBSCAN 聚类具体的方法
+- BM25
+-
+- 生成诊断 prompt
+	- 知识匹配 metrics -> knowledge chunks
+	- tool matching 更难 LLM解决 - sim of embeddings - diagnosis context -> tools
+-
+- UCT (Upper Confidence Bound applied to Trees) function
+-
+- ![image.png](../assets/image_1709396392923_0.png)
+-
+-
+-
