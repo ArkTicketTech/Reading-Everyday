@@ -1,0 +1,15 @@
+- # 第16集 诸子百家
+	- 轴心时代
+		- 公元前500年，孔子、释迦摩尼、苏格拉底皆在这一时期诞生，三大文化中心百家争鸣，留下了丰富的文化遗产
+	- [稷下学宫](https://zh.wikipedia.org/zh-cn/%E7%A8%B7%E4%B8%8B%E5%AD%B8%E5%AE%AE)
+		- 又称**稷下之学**，始建于[战国](https://zh.wikipedia.org/wiki/%E6%88%B0%E5%9C%8B)时期（公元前四世纪）的[田齐桓公](https://zh.wikipedia.org/wiki/%E7%94%B0%E9%BD%90%E6%A1%93%E5%85%AC)。[稷下](https://zh.wikipedia.org/wiki/%E7%A8%B7%E4%B8%8B)位于齐国国都[临淄](https://zh.wikipedia.org/wiki/%E8%87%A8%E6%B7%84)（今[山东省](https://zh.wikipedia.org/wiki/%E5%B1%B1%E4%B8%9C%E7%9C%81)[淄博市](https://zh.wikipedia.org/wiki/%E6%B7%84%E5%8D%9A%E5%B8%82)）稷门附近。[齐宣王](https://zh.wikipedia.org/wiki/%E9%BD%8A%E5%AE%A3%E7%8E%8B)之时，在稷下扩置学宫，招致天下名士：[儒家](https://zh.wikipedia.org/wiki/%E5%84%92%E5%AE%B6)、[道家](https://zh.wikipedia.org/wiki/%E9%81%93%E5%AE%B6)、[法家](https://zh.wikipedia.org/wiki/%E6%B3%95%E5%AE%B6)、[名家](https://zh.wikipedia.org/wiki/%E5%90%8D%E5%AE%B6)、[兵家](https://zh.wikipedia.org/wiki/%E5%85%B5%E5%AE%B6)、[农家](https://zh.wikipedia.org/wiki/%E5%86%9C%E5%AE%B6)、[阴阳家](https://zh.wikipedia.org/wiki/%E9%99%B0%E9%99%BD%E5%AE%B6)等百家之学，会集于此，自由讲学、著书论辩。
+	- 孟子亚圣为孔子之孙的学生，与孔子不同，于诸国流转之时备受礼遇
+	- 墨子
+		- 墨子一开始也尊儒家，后来觉得儒家仁爱讲究血缘，有亲疏远近之分，觉得不对，提出非攻坚爱的思想；极力反对战争
+		- 墨家有体系化的规范，所有人都遵循钜子的命令
+		- 墨子是战国时期著名的发明家
+	- 荀子
+		- 也是儒家学派的学者，不过没有上孔庙，其主要原因就是他的主张带有强烈的法家思想，这也和其出生于法家思想盛行的赵国有关
+		- 提出性恶论 和 儒家格格不入
+		- 其学生，李斯和韩非子则是法家的重要人物，后来抨击了儒家学说
+	-
