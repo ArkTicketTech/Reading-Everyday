@@ -1,0 +1,17 @@
+- 交易数据 Transaction Receipt
+	- 每一笔交易完成后，会产生交易收据， 交易收据记录了交易执行的基本信息，是交易被包含在区块链中的重要证据。
+		- • transactionHash：交易哈希值，用于唯一标识一笔交易。
+		- • transactionIndex：交易在所在区块中的索引位置。
+		- • blockHash：包含该交易的区块哈希值。
+		- • blockNumber：包含该交易的区块编号。
+		- • from：发起交易的地址。
+		- • to：交易的目标地址。
+		- • cumulativeGasUsed：当前区块中累积消耗的 Gas 量。
+		- • gasUsed：这笔交易所消耗的 Gas 量。
+		- • contractAddress：如果交易用于创建合约，则表示合约地址；否则为 null。
+		- • logs：交易过程中产生的事件日志。
+		- • logsBloom：布隆过滤器，用于快速检索交易日志。
+		- • status：交易执行的状态码，表示成功或失败。
+	- Merkle Patricia Tree
+		- 默克尔树
+		- **默克尔-帕特里夏树 **（ Merkle Patricia Tree ） 结合了默克尔树（ Merkle Tree ）和帕特里夏树（ Patricia Trie ）的优点，既可以验证数据的完整性，也可以快速检索状态信息，非常适合用作以太坊中的数据存储。在每个区块里，分别有一棵默克尔-帕特里夏树来存储交易数据、收据数据、状态数据和账户数据。
