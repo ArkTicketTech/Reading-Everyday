@@ -1,0 +1,10 @@
+- ### Unbounded Data: Batch
+	- 通过将无界数据切分成固定大小的窗口 每个间隔被当作一个独立的批次进行处理 - 可以用批处理的方式处理无界数据
+	- ### Fixed Windows
+		- 固定窗口将连续的数据流分割成基于固定时长的段或窗口。这种方法特别适用于创建周期性报告或总结持续累积的数据。
+		- 完整性问题：
+			- 数据延迟 - What if some of your events are delayed en route to the logs due to a network partition
+			- 数据分布 - What if your events are collected globally and must be transferred to a common location before processing
+			- 不规律、不均匀的数据到达 - What if your events come from mobile devices
+	- ### Sessions
+		- 会话通常被定义为活动期间（例如，对于特定用户），由不活动的间隔终止。使用典型的批处理引擎计算会话时，您通常会遇到跨批次分割的会话，如图1-4中的红色标记所示。我们可以通过增加批次大小来减少分割的数量，但这会以增加延迟为代价。另一个选项是添加额外的逻辑来从多个批次中拼接会话。
