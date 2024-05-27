@@ -46,6 +46,7 @@
 - [ ] Redis设计与实现 2024.01.19 ~ 
 - [ ] 人的行为 2024.02.27 ~
 - [ ] 深入理解分布式系统 2024.02.29 ~ 2024.03.21
+- [ ] Streaming Systems Real-time event processing 2024.05.27~
 
 ## members
 
