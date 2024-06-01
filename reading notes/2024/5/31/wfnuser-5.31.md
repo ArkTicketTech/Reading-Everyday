@@ -1,0 +1,5 @@
+- 从公元前230年攻打韩国到前221年灭齐国结束，共计10年的时间，先后按顺序消灭**韩、赵、魏、楚、燕、齐**六国，结束了中国自春秋以来长达500多年的诸侯割据纷争的局面，建立了中国历史上第一个君主中央集权国家，即秦朝。
+- 秦始皇统一六国时 38 岁
+- 郑国渠
+	- 郑国渠由[韩国](https://zh.wikipedia.org/wiki/%E9%9F%A9%E5%9B%BD_(%E6%88%98%E5%9B%BD))水工[郑国](https://zh.wikipedia.org/wiki/%E9%83%91%E5%9B%BD_(%E6%B0%B4%E5%B7%A5))主持修建。郑国原本是西去秦国的[细作](https://zh.wikipedia.org/wiki/%E7%B4%B0%E4%BD%9C)，劝说[秦王政](https://zh.wikipedia.org/wiki/%E7%A7%A6%E7%8E%8B%E6%94%BF)兴修[水利](https://zh.wikipedia.org/wiki/%E6%B0%B4%E5%88%A9)工程，企图使秦国把经费与人力放在国内，无暇部署东征。后来秦王政发觉郑国的阴谋，怒欲杀之，郑却说：“臣起初确实是来当[间谍](https://zh.wikipedia.org/wiki/%E9%96%93%E8%AB%9C)的，但是渠道修建完成也对秦国有利；臣帮助韩国延长短短几年的国祚，却可以为秦国创建万世的大功”[[1]](https://zh.wikipedia.org/zh-cn/%E9%83%91%E5%9B%BD%E6%B8%A0#cite_note-1)。秦王政甚以为然，工程得以继续进行，于公元前246年开始使用[[2]](https://zh.wikipedia.org/zh-cn/%E9%83%91%E5%9B%BD%E6%B8%A0#cite_note-2)。
+-
