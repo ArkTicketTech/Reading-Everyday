@@ -1,0 +1,11 @@
+- **What is the research problem or question?**
+	- an approach for performant and predicate-agnostic hybrid search
+	- 此前的 hybrid search 方法 要么效率低下 要么支持很有限的搜索谓词 比如少量等值谓词
+- **Existing System**
+	- pre-filtering
+		- 在 high selectivity 的大规模图中效率很低
+	- post-filtering
+		- 通常就需要扩大搜索范围 - 这是代价高昂的
+	-
+- **Why is this problem important?**
+	- many applications must jointly query both unstructured and structured data, requiring ANN search in combination with predicate filtering. For example, customers on an e-commerce site can search for t-shirts similar to a reference image, while filtering on price
