@@ -1,0 +1,26 @@
+- ACORN
+	- 核心
+		- core idea is to search over the index’s predicate subgraph,
+		- The core techniques we propose are predicate-agnostic neighbor-list expansions and pruning during construction in combination with predicate-based filtering during search
+	- $ACORN-\gamma$
+		- search
+			- 和 hnsw 的主要区别在于 GET-NEIGHBORS 有两种策略
+				- filter-based - 对 $N^l(v)$ 根据 p 进行过滤得到 $N^l_p(v)$
+				- compression-based - 对 $N^l(v)$ 进行扩展 引入 two-hop 邻居 然后 filtering
+		- construction
+			- 相比于 hnsw 有两个核心改动
+				- expand neighbor list
+				- predicate-agnostic pruning
+			- Neighbor List Expansion
+				-
+			- Compression
+				- The core idea of the pruning procedure is to precisely retain each node’s nearby neighbors in the index, while approximating farther away neighbor during search. 
+			-
+			-
+			-
+	- $ACORN-1$
+		-
+	-
+	-
+	-
+	-
