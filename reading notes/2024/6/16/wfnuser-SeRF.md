@@ -1,0 +1,7 @@
+- **What is the research problem or question?**
+	- range-filtering ANNS
+- **Why is this problem important?**
+	- 现有方法在 range 很大的时候性能会迅速下降
+- **What are the key contributions of the paper?**
+	- 提出了 segment graph - whose index time and size are the same as a single ANNS index, yet can losslessly compress the 𝑛 ANNS indexes, reducing the indexing cost by a factor of Ω(𝑛).
+	- To handle general range queries, we propose a 2D segment graph with average-case index size 𝑂 (𝑛 log 𝑛) to compress 𝑛 segment graphs, breaking the quadratic barrier. 
