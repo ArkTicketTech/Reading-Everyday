@@ -16,14 +16,18 @@ core data types:
 
 advanced data types:
 1. geopoint
-2. object
-3. nested
-4. flattened
-5. join
+2. object：json对象，但内部对象flattened化存储
+3. nested：真正效果的json对象
+4. flattened：对象下所有的值都被认为keyword，可以直接查询出来。
+5. join：类似外键，可以在文档间建立父子关系，
 6. search as you type
+7. ...
 
-还可以定义multiple data type
 
+还可以定义multiple data type。
 
 索引的机制与大多数数据库系统类似：
-客户的写请求先到index buffer，lucene每秒将buffer中的documents进行收集，创建新的segment，然后写入file system buffer（有参数可以控制），最后进行刷盘。
+客户的写请求先到index buffer，lucene每秒将buffer中的documents进行收集，创建新的segment，然后写入file system buffer（有refresh参数可以控制），最后进行刷盘。
+如果不是实时的写入file system buffer，可能就会出现刚写的数据查询不到的情况。配置实时会影响性能，所以说es是一个近实时的系统。refresh可以针对某一个索引。
+
+由于每秒都会生成段，段不会断膨胀，所以后台会合并段，每三个segment合并成一个新的segment。
