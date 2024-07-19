@@ -16,7 +16,7 @@
 1. 需要正确的同步、重试配置来满足可靠性
    1. acks > 1 
    2. min.insync.replicas > 1;
-   3. unclean.leader.election = false; 允许不同步的副本成为leader
+   3. unclean.leader.election = false; 不允许不同步的副本成为leader
    4. enable.idempotence为true
 2. 需要正确的处理错误：
    1. 不可重试错误要进行记录
