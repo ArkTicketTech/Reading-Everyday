@@ -1,4 +1,8 @@
-原生数据类型：
+教程：https://solidity-by-example.org
+
+在线部署：https://remix.ethereum.org/
+
+# 原生数据类型
 
 1. boolean
 2. uint256: unsigned integer
