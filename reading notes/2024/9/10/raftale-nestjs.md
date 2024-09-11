@@ -6,17 +6,17 @@ Controllers are responsible for handling incoming requests and returning respons
 
 - [x] Routing
 - [x] Request object
-- [ ] Resources
-- [ ] Route wildcards
-- [ ] Status code
-- [ ] Headers
-- [ ] Redirection
-- [ ] Route parameters
-- [ ] Sub-Domain Routing
-- [ ] Scopes
-- [ ] Asynchronicity
-- [ ] Request payloads
-- [ ] Handling errors
-- [ ] Full resource sample
-- [ ] Getting up and running
-- [ ] Library-specific approach
+- [x] Resources
+- [x] Route wildcards
+- [x] Status code
+- [x] Headers
+- [x] Redirection
+- [x] Route parameters
+- [x] Sub-Domain Routing
+- [x] Scopes
+- [x] Asynchronicity
+- [x] Request payloads
+- [x] Handling errors
+- [x] Full resource sample
+- [x] Getting up and running
+- [x] Library-specific approach 
