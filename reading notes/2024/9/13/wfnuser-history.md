@@ -1,0 +1,39 @@
+- #Documentary #中国通史-纪录片 西晋统一 魏晋风度 门阀政治
+	- 西晋开国君主是谁？ #card
+		- 司马炎
+	- 什么是高平陵之变？ #card
+		- 司马懿趁着[曹爽](https://zh.wikipedia.org/wiki/%E6%9B%B9%E7%88%BD)与魏帝[曹芳](https://zh.wikipedia.org/wiki/%E6%9B%B9%E8%8A%B3)到[高平陵](https://zh.wikipedia.org/wiki/%E9%AB%98%E5%B9%B3%E9%99%B5)谒陵时发动[政变](https://zh.wikipedia.org/wiki/%E6%94%BF%E8%AE%8A)，控制京城，[族灭](https://zh.wikipedia.org/wiki/%E6%97%8F%E6%BB%85)曹爽
+	- 高平陵之变带来的局面是什么？ #card
+		- 自此司马氏全面掌权 - 皇帝沦为司马家的傀儡
+	- 扶不起的阿斗说的是谁？ #card
+		- 刘禅
+	- 刘禅是谁？ #card
+		- 刘备之子
+	- 乐不思蜀说的是什么？ #card
+		- 后主刘禅被挟持到魏都洛阳 - 有一天司马昭设宴招待刘禅，并故意派人演出蜀国的歌舞杂耍 - 司马昭 问禅曰：「颇思蜀否？」禅曰：「此间乐，不思蜀。」
+	- 司马昭之心，路人皆知是谁说的 #card
+		- 曹髦
+	- 举出竹林七贤的几位？ #card
+		- 山涛、阮籍、刘伶、嵇康
+	- 孙吴首都在哪？ #card
+		- 孙权武昌称帝 - 不久迁都建业 - 吴末帝孙皓 265年 再次迁都武昌 - 266年还都建业
+	- 魏晋风度讲的是什么？ #card
+		- **魏晋时期名士们所具有的那种率直任诞、清俊通脱的行为风格**
+	- 东晋开国皇帝？ #card
+		- 司马睿
+	- 西晋大书法家有谁？ #card
+		- 王羲之
+	- 王羲之的代表作？ #card
+		- 兰亭集序
+	- 兰亭集序是谁写的？ #card
+		- 王羲之
+	- 晋朝豪门望族？ #card
+		- 王羲之、谢安
+	- 什么是八王之乱？ #card
+		- 是一场由西晋皇族为争夺中央政权而引发的内斗，为[中国历史](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2)上一场极为严重的皇族内乱，共持续16年。
+	- 什么是五胡乱华？ #card
+		- **五胡乱华**，是指[中国](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD)[西晋](https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%99%8B)时期境内各个内迁民族趁晋政权在[八王之乱](https://zh.wikipedia.org/wiki/%E5%85%AB%E7%8E%8B%E4%B9%8B%E4%B9%B1)期间衰弱之际，割据汉地北部建立多个政权，与退守汉地南部的晋政权形成对峙之势。
+	- 五胡指的是哪五胡？ #card
+		- [匈奴](https://zh.wikipedia.org/wiki/%E5%8C%88%E5%A5%B4)、[羯](https://zh.wikipedia.org/wiki/%E7%BE%AF)、[鲜卑](https://zh.wikipedia.org/wiki/%E9%B2%9C%E5%8D%91)、[羌](https://zh.wikipedia.org/wiki/%E8%A5%BF%E7%BE%8C)及[氐](https://zh.wikipedia.org/wiki/%E6%B0%90)等五族
+	- 门阀制度 #card
+		- 是指世代为[官](https://zh.wikipedia.org/wiki/%E5%AE%98%E5%83%9A)的名门望族及世家[贵族](https://zh.wikipedia.org/wiki/%E8%B2%B4%E6%97%8F)，也是中国[封建制度](https://zh.wikipedia.org/wiki/%E5%B0%81%E5%BB%BA)里的另一种形式
