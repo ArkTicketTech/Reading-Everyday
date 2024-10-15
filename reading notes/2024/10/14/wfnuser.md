@@ -1,0 +1,3 @@
+- circle curve -> circle group -> circle code -> circle FFT -> circle FRI -> circle STARK
+- twin-coset
+- vanishing polynomials
