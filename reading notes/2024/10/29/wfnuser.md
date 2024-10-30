@@ -1,0 +1,7 @@
+- polynomial commitments
+	- Based on pairings + trusted setup
+		- KZG10
+	- Based on discrete logarithm
+		- IPA/Bulletproofs
+	- Based on IOPs + hashing
+		- FRI
