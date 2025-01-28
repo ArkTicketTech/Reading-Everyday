@@ -1,3 +1,4 @@
+```
 fun max_constant e =
 	case e of 
 		  constant i => i
@@ -8,6 +9,7 @@ fun max_constant e =
 		| Multiply(e1,e2) => if max_constant e1 > max_constant e2
 							 then max_constant e1
 							 else max_constant e2
+```
 							 
 fun max_constant e =
 定义了一个名为 max_constant 的函数，接受一个参数 e
