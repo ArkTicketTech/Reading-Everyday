@@ -1,4 +1,4 @@
-```
+```SML
 fun max_constant e =
 	case e of 
 		  constant i => i
